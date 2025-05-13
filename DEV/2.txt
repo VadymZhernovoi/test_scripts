@@ -44,14 +44,14 @@ ___________________________
 *файлы с названием дней недели должны попасть в папку /home/logs 
 
 #!/bin/bash
-mkdir -p /opt/tesT/mydrive
-mkdir -p /home/logs
-echo "Hello" > /opt/tesT/mydrive/te.log
-days=("Вторник" "Среда" "Четверг" "Пятница" "Суббота")
-for day in "${days[@]}"
+mkdir -p /opt/tesT/mydrive
+mkdir -p /home/logs
+echo "Hello" > /opt/tesT/mydrive/te.log
+days=("Вторник" "Среда" "Четверг" "Пятница" "Суббота")
+for day in "${days[@]}"
 do
-touch "/home/logs/$day.txt"
-echo "Создан файл $day.txt"
+touch "/home/logs/$day.txt"
+echo "Создан файл $day.txt"
 done
 
 _____________________________________________________________________________________________________
@@ -64,12 +64,12 @@ ________________________________________________________________________________
 ***размер файла скрипта не должен превышать 145 байт
 
 #!/bin/bash
-mkdir -p /tmp/test
-#mkdir -p /opt/name
-df -h | grep -o /dev/root > /tmp/test/root
-for i in {8..3}
+mkdir -p /tmp/test
+#mkdir -p /opt/name
+df -h | grep -o /dev/root > /tmp/test/root
+for i in {8..3}
 do
-mkdir -p /opt/name/$i.exp
+mkdir -p /opt/name/$i.exp
 done
 
 _____________________________________________________________________________________________________
@@ -84,9 +84,9 @@ ________________________________________________________________________________
 
 
 #!/bin/bash
-mkdir -p /logs/lan
-cat /etc/services | grep snmp >> /home/logs.log
-mv /home/logs.log /logs/lan/logs.log
-ps -ef | grep ssh
+mkdir -p /logs/lan
+cat /etc/services | grep snmp >> /home/logs.log
+mv /home/logs.log /logs/lan/logs.log
+ps -ef | grep ssh
 
 _____________________________________________________________________________________________________

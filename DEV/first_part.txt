@@ -47,17 +47,17 @@ __________________________
 
 
 #!/bin/bash
-mkdir -p /opt/a_e
-for i in {a..e}
+mkdir -p /opt/a_e
+for i in {a..e}
 do
-touch /opt/a_e/$i
+touch /opt/a_e/$i
 done
-df -h | grep -w / | awk '{print $5}' >> /opt/a_e/a
-echo “i’m file b" >> /opt/a_e/b
-ps -ef | grep ssh >> /opt/a_e/c
-date +’%D’ > /opt/a_e/d
-cat /etc/group | head -2 | tail -1 >> /opt/a_e/e
-echo “done”
+df -h | grep -w / | awk '{print $5}' >> /opt/a_e/a
+echo “i’m file b" >> /opt/a_e/b
+ps -ef | grep ssh >> /opt/a_e/c
+date +’%D’ > /opt/a_e/d
+cat /etc/group | head -2 | tail -1 >> /opt/a_e/e
+echo “done”
 
 _________________________
 
@@ -72,15 +72,15 @@ _________________________
 7 выведет на экран “done”
 
 #!/bin/bash
-date +'%D/%T'
-echo "test start"
-mkdir -p /etc/drive/testlogs
-echo "test passed:" >> /etc/drive/testlogs/logs.log
-date +'%T' >> /etc/drive/testlogs/logs.log
-cat /opt/temu/root-x86.cfg | sed -n '3,5p' >> /etc/drive/testlogs/logs.log
-mkdir -p /tmp/new
-mv /etc/drive/testlogs/logs.log /tmp/new
-echo "done"
+date +'%D/%T'
+echo "test start"
+mkdir -p /etc/drive/testlogs
+echo "test passed:" >> /etc/drive/testlogs/logs.log
+date +'%T' >> /etc/drive/testlogs/logs.log
+cat /opt/temu/root-x86.cfg | sed -n '3,5p' >> /etc/drive/testlogs/logs.log
+mkdir -p /tmp/new
+mv /etc/drive/testlogs/logs.log /tmp/new
+echo "done"
 
 
 _______________________
@@ -89,4 +89,4 @@ _______________________
 *скрипт должен работать в фоновом режиме
 
 #!/bin/bash
-mkdir -p /logs
+mkdir -p /logs
